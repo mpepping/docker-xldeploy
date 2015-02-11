@@ -2,7 +2,6 @@ FROM centos:latest
 
 MAINTAINER Martijn Pepping <martijn@xbsd.nl>
 
-
 # Set this to the name of the XL Deploy archive that you're using
 # 
 ENV XLDepVer xl-deploy-4.5.2-server-free-edition
@@ -12,7 +11,6 @@ ENV XLDepVer xl-deploy-4.5.2-server-free-edition
 #
 RUN yum -y update; yum clean all
 RUN yum -y install yum install unzip java-1.7.0-openjdk.x86_64; yum clean all
-
 
 
 # (UN)COMMENT - If you're using a TGZ archive of XL Deploy.
@@ -27,7 +25,6 @@ ADD ${XLDepVer}.zip /opt/${XLDepVer}.zip
 RUN cd /opt && \
     unzip ${XLDepVer}.zip && \
     rm ${XLDepVer}.zip
-
 
 
 # Add license and setupfile
