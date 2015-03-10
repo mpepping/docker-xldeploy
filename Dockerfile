@@ -10,7 +10,7 @@ ENV XLDepVer xl-deploy-4.5.2-server-free-edition
 # Update and install packages
 #
 RUN yum -y update; yum clean all
-RUN yum -y install yum install unzip java-1.7.0-openjdk.x86_64; yum clean all
+RUN yum -y install unzip java-1.7.0-openjdk.x86_64; yum clean all
 
 
 # (UN)COMMENT - If you're using a TGZ archive of XL Deploy.
